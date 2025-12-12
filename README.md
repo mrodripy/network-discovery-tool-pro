@@ -40,7 +40,7 @@ pip install -e .
 ndiscover-pro --help
 
 📖 Uso Básico
-bash
+```bash
 
 # Escaneo básico de red
 ndiscover-pro 192.168.1.0/24
@@ -61,7 +61,7 @@ ndiscover-pro 192.168.1.0/24 -p 22,80,443,3389 --service-scan
 ndiscover-pro 192.168.1.0/24 --threads 100 --timeout 1
 
 🖥️ Ejemplo de Salida
-bash
+```bash
 
 $ ndiscover-pro 192.168.1.0/24 -p 22,80,443 --verbose
 14:30:25 - INFO - 🔍 INICIANDO ESCANEO PRO
@@ -100,7 +100,7 @@ La opción -o html genera un reporte visual completo que incluye:
     📱 Diseño responsive
 
 Para ver el reporte HTML:
-bash
+```bash
 
 ndiscover-pro 192.168.1.0/24 -p 22,80,443,3389,8080 -o html
 firefox scan_results_192.168.1.0_24.html  # O tu navegador preferido
