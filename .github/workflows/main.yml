@@ -1,0 +1,58 @@
+name: Basic Validation
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install colorlog
+        
+    - name: Validate all imports
+      run: |
+        echo "🔍 Testing module imports..."
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        
+        # Test all critical imports
+        try:
+            from network_discovery_tool.cli import parse_arguments
+            print('✅ 1/4: CLI module OK')
+            
+            from network_discovery_tool.scanner import NetworkScanner, PortScanner
+            print('✅ 2/4: Scanner modules OK')
+            
+            from network_discovery_tool.output import generate_report
+            print('✅ 3/4: Output module OK')
+            
+            from network_discovery_tool.logger import get_logger
+            print('✅ 4/4: Logger module OK')
+            
+            print('🎉 All imports successful!')
+            exit(0)
+        except Exception as e:
+            print(f'❌ Import failed: {e}')
+            exit(1)
+        "
+        
+    - name: Verify package structure
+      run: |
+        echo "📁 Checking essential files..."
+        [ -f "setup.py" ] && echo "✅ setup.py exists" || exit 1
+        [ -f "requirements.txt" ] && echo "✅ requirements.txt exists" || exit 1
+        [ -f "main.py" ] && echo "✅ main.py exists" || exit 1
+        [ -d "network_discovery_tool" ] && echo "✅ Package directory exists" || exit 1
+        echo "📁 All essential files present"
