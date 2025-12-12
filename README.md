@@ -3,6 +3,7 @@
 [![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/mrodripy/network-discovery-tool-pro)](https://github.com/mrodripy/network-discovery-tool-pro/releases)
+[![GitHub Actions Status](https://github.com/mrodripy/network-discovery-tool-pro/actions/workflows/main.yml/badge.svg)](https://github.com/mrodripy/network-discovery-tool-pro/actions)
 [![GitHub issues](https://img.shields.io/github/issues/mrodripy/network-discovery-tool-pro)](https://github.com/mrodripy/network-discovery-tool-pro/issues)
 
 **Herramienta profesional de escaneo de redes** con detección de puertos, reportes HTML y sistema de logging avanzado.
