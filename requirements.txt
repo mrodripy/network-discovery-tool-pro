@@ -1,0 +1,7 @@
+# Para funcionalidades futuras
+# colorama>=0.4.6  # Para output con colores (opcional)
+# matplotlib>=3.5  # Para gráficos (opcional)
+# jinja2>=3.1.2    # Para templates HTML más avanzados (opcional)
+
+# Por ahora, solo Python standard library
+# No se requieren dependencias externas
