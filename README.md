@@ -40,24 +40,6 @@ pip install -e .
 ndiscover-pro --help
 
 📖 Uso Básico
-# Escaneo básico de red
-ndiscover-pro 192.168.1.0/24
-
-# Escaneo con puertos comunes
-ndiscover-pro 192.168.1.0/24 -p 22,80,443
-
-# Reporte HTML profesional
-ndiscover-pro 192.168.1.0/24 -p 1-100 -o html
-
-# Escaneo detallado con logging
-ndiscover-pro 192.168.1.0/24 --verbose --log-level DEBUG
-
-# Detección de servicios
-ndiscover-pro 192.168.1.0/24 -p 22,80,443,3389 --service-scan
-
-# Escaneo rápido con más hilos
-ndiscover-pro 192.168.1.0/24 --threads 100 --timeout 1
-
 bash
 
 # Escaneo básico de red
