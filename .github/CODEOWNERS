@@ -1,0 +1,10 @@
+# Dueño principal de todo el proyecto
+* @mrodripy
+
+# Dueños específicos por carpeta/archivo
+/network_discovery_tool/ @mrodripy
+/.github/ @mrodripy
+
+# Documentación
+README.md @mrodripy
+CHANGELOG.md @mrodripy
