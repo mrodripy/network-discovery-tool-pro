@@ -1,7 +1,20 @@
-# Para funcionalidades futuras
-# colorama>=0.4.6  # Para output con colores (opcional)
-# matplotlib>=3.5  # Para gráficos (opcional)
-# jinja2>=3.1.2    # Para templates HTML más avanzados (opcional)
+# Network Discovery Tool PRO - Dependencies
+# Python 3.6 or higher required
 
-# Por ahora, solo Python standard library
-# No se requieren dependencias externas
+# Core dependencies
+colorlog>=6.7.0
+
+# Note: All other dependencies are Python standard library:
+# - concurrent.futures (parallel scanning)
+# - socket (port scanning)
+# - ipaddress (network CIDR handling)
+# - argparse (CLI interface)
+# - logging (log system)
+# - subprocess (ping operations)
+# - json, csv, datetime (output formats)
+
+# Optional for future features (commented out):
+# flask>=2.3.0          # For web dashboard (future)
+# sqlite3               # Built-in Python, for scan history (future)
+# matplotlib>=3.5.0     # For advanced charts (future)
+# jinja2>=3.1.2         # For HTML template engine (future)
